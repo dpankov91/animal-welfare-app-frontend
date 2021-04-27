@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/adopt-pet.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/shared/fund.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rk8433u6P3zHCOkutkbygzAKkq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fullstack/chat-app-y2021-frontend" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\dpank\Documents\GitHub\animal-welfare-app-frontend\animal-welfare-app-frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="" />
+      <created>1619508532263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619508532263</updated>
+      <workItem from="1619508533420" duration="795000" />
+      <workItem from="1619546215230" duration="1911000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619546796187">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1619546796187" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1619546685149">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619546685149" />
+  </component>
+</project>
