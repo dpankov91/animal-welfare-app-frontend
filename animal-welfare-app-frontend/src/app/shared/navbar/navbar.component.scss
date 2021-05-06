@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sansita+Swashed&family=Slabo+27px&display=swap');
+
+.navbar a{
+  font-size: 20px;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  margin: 5px;
+  border-bottom: 2px solid transparent;
+}
+.navBor{
+  border-bottom: 1px solid gainsboro;
+}
+
+.navbar a:hover{
+  border-bottom: 2px solid #181174;
+}
+
+.linksBar{
+  width: 30%;
+}
+
+.icon{
+  margin-left: 60px
+}
+
+
