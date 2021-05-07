@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <workItem from="1619546215230" duration="2164000" />
       <workItem from="1620299171366" duration="2237000" />
       <workItem from="1620306043487" duration="1355000" />
-      <workItem from="1620372653649" duration="1957000" />
+      <workItem from="1620372653649" duration="4069000" />
     </task>
     <servers />
   </component>
