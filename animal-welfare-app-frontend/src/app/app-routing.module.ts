@@ -7,7 +7,7 @@ const routes: Routes = [{ path: 'funds', loadChildren: () => import('./fund/fund
   {path: '', component: WelcomePageComponent}];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
