@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/doggie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/doggy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/giraffes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/kitty.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/shared/footer/footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/shared/footer/footer.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/welcome-page/welcome-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/welcome-page/welcome-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/welcome-page/welcome-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/welcome-page/welcome-page.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,7 +1,12 @@
 .carousel-caption {
-  margin-bottom: 20%;
+  margin-bottom: 15%;
   /* background: rgba(0,0,0,0.5); */
   padding: 50px 100px;
+}
+
+.carousel-item{
+  max-height: 750px;
+  height: 100%;
 }
 
 .carousel-caption h5{
