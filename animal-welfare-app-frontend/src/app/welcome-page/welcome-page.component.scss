@@ -1,0 +1,51 @@
+.carousel-caption {
+  margin-bottom: 20%;
+  /* background: rgba(0,0,0,0.5); */
+  padding: 50px 100px;
+}
+
+.carousel-caption h5{
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.carousel-caption p{
+  font-size: 24px;
+}
+
+.drk:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.5;
+}
+
+.drk1:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.4;
+}
+
+.btn-primary{
+  background: #00B963;
+  border-color: transparent !important;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.btn-primary:hover{
+  background: #CAFF69;
+  border-color: transparent !important;
+  color: black;
+}
