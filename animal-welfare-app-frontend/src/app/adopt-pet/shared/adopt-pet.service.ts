@@ -3,7 +3,7 @@ import {Socket} from 'ngx-socket-io';
 import {Observable} from 'rxjs';
 import {AdoptPetDto} from './adopt-pet.dto';
 import {SocketAdopt} from '../../app.module';
-import {AdoptPet} from './adopt-pet.model';
+import {Pet} from './adopt-pet.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,9 @@ export class AdoptPetService {
 
   constructor(private socket: SocketAdopt) { }
 
-  getAllPets(): Observable<AdoptPet[]>{
+  getAllPets(): Observable<Pet[]>{
     return this.socket
-      .fromEvent<AdoptPet[]>('allPets');
+      .fromEvent<Pet[]>('allPets');
   }
 
   getPets(): void{

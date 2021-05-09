@@ -6,7 +6,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import {Socket, SocketIoConfig, SocketIoModule} from 'ngx-socket-io';
+import {Socket} from 'ngx-socket-io';
 
 @Injectable()
 export class SocketAdopt extends Socket{
