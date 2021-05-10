@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/person.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/assets/dogz.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-form/adopt-form.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/adopt-pet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/adopt-pet.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dpank\Documents\GitHub\animal-welfare-app-frontend\animal-welfare-app-frontend\src\app\adopt-pet\shared\models" />
       <recent name="C:\Users\tiene\Desktop\4. Semester\Fullstack Development\Exam Project\animal-welfare-app-frontend\animal-welfare-app-frontend\src\app\adopt-pet\shared" />
     </key>
   </component>
