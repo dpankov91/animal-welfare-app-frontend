@@ -21,4 +21,8 @@ export class AdoptPetService {
     console.log('pets');
     this.socket.emit('allPets', null);
   }
+
+  createPet(pet: Pet): void {
+    this.socket.emit('add-pet', pet);
+  }
 }

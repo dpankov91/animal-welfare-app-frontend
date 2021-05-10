@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdoptPetComponent } from './adopt-pet.component';
+import {AddPetComponent} from '../add-pet/add-pet.component';
 
-const routes: Routes = [{ path: '', component: AdoptPetComponent }];
+const routes: Routes = [{ path: '', component: AdoptPetComponent },
+  {path: 'add-pet', component: AddPetComponent}
+  ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

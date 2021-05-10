@@ -1,0 +1,24 @@
+<div [formGroup]="petForm" *ngIf="!petCreate">
+  <mat-card-subtitle fxLayoutAlign="right center">
+    <mat-card-footer style = "font-weight: bold"> Please fill out all fields!!! </mat-card-footer>
+  </mat-card-subtitle>
+
+  <label>
+    Name:
+    <input type = "text" formControlName="name" id="name">
+  </label>
+
+  <label>
+    Description:
+    <input type = "text" formControlName="description" id="description">
+  </label>
+
+  <button type = "button" (click)="createPet()" class="btn btn-info btn-upd">Create</button>
+</div>
+<div *ngIf="petCreate">
+  {{petCreate | json}}
+  <button (click)="petCreate = undefined"> Oh yeah!</button>
+</div>
+<div fxLayout="row"  fxLayoutAlign="center top" fxLayoutGap="15px">
+  <button routerLink="/adopt-pet" style="background-color: deepskyblue">Back</button>
+</div>

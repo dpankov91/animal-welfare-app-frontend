@@ -17,26 +17,31 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   allPets$: Observable<Pet[]> | undefined;
   unsubscribe$ = new Subject();
   petSelected: Pet | undefined;
-  //allPets$: Subscription;
+  // allPets$: Subscription;
 
   constructor(private petService: AdoptPetService) { }
 
   ngOnInit(): void {
-
-    // console.log('Pets in Frontend:' + this.allPets);
+    //this.refresh();
+    //this.location.reload();
+    //window.location.reload();
+    console.log('Page loaded');
     this.allPets$ = this.petService.getAllPets();
-
+    console.log('Pets in Frontend:' + this.allPets$);
       // .pipe(
       // takeUntil(this.unsubscribe$)
       // ).subscribe(pets => {
       //   this.allPets$ = pets;
       //   console.log('allPets in Frontend =', pets);
       // });
-    // console.log('Pets in Frontend:' + this.allPets);
+    //
   }
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
 
+  // refresh(): any {
+  //   this.allPets$ = this.petService.getAllPets();
+  // }
 }

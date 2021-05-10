@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import {Socket} from 'ngx-socket-io';
+import { AddPetComponent } from './add-pet/add-pet.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @Injectable()
 export class SocketAdopt extends Socket{
@@ -26,12 +28,14 @@ export class SocketFunds extends Socket{
     AppComponent,
     NavbarComponent,
     WelcomePageComponent,
-    FooterComponent
+    FooterComponent,
+    AddPetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [SocketFunds, SocketAdopt],
   bootstrap: [AppComponent]
