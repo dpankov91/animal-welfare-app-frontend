@@ -44,4 +44,7 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   // refresh(): any {
   //   this.allPets$ = this.petService.getAllPets();
   // }
+  loadSelectedPet(pet: Pet): void {
+    this.petSelected = pet;
+  }
 }
