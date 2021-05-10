@@ -7,7 +7,13 @@
           <h4 class="headers">Pets</h4>
         </div>
         <div class="card-body ">
-          Cat
+          <div *ngIf="allPets$ | async as pets">
+            <ul>
+              <li class="petList" *ngFor="let pet of pets">
+                {{pet.name}} - {{pet.description}}
+              </li>
+            </ul>
+          </div>
           <div class="upd-del-btn">
             <button type="button" class="btn btn-info btn-upd" >Add new pet</button>
           </div>
