@@ -2,8 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AdoptPetService} from './shared/adopt-pet.service';
 import {AdoptPetDto} from './shared/adopt-pet.dto';
 import {Observable, Subject, Subscription} from 'rxjs';
+
 import {Pet} from './shared/adopt-pet.model';
-import {take, takeUntil, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-adopt-pet',
@@ -22,7 +22,7 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   constructor(private petService: AdoptPetService) { }
 
   ngOnInit(): void {
-    //this.petService.getPets();
+
     // console.log('Pets in Frontend:' + this.allPets);
     this.allPets$ = this.petService.getAllPets();
 
