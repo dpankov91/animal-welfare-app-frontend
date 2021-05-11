@@ -27,6 +27,7 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
     //window.location.reload();
     console.log('Page loaded');
     this.allPets$ = this.petService.getAllPets();
+    this.petService.getPets();
     console.log('Pets in Frontend:' + this.allPets$);
       // .pipe(
       // takeUntil(this.unsubscribe$)
