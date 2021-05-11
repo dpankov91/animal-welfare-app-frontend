@@ -22,9 +22,6 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   constructor(private petService: AdoptPetService) { }
 
   ngOnInit(): void {
-    //this.refresh();
-    //this.location.reload();
-    //window.location.reload();
     console.log('Page loaded');
     this.allPets$ = this.petService.getAllPets();
     this.petService.getPets();
