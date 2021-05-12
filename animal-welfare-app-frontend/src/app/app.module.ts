@@ -9,6 +9,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import {Socket} from 'ngx-socket-io';
 import { AddPetComponent } from './add-pet/add-pet.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {NgxsModule} from '@ngxs/store';
+import {environment} from '../environments/environment';
+import {AdoptPetState} from './adopt-pet/state/adopt-pet.state';
 
 @Injectable()
 export class SocketAdopt extends Socket{
@@ -36,6 +39,9 @@ export class SocketFunds extends Socket{
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
+    NgxsModule.forRoot([AdoptPetState], {
+      developmentMode: !environment.production
+    })
   ],
   providers: [SocketFunds, SocketAdopt],
   bootstrap: [AppComponent]
