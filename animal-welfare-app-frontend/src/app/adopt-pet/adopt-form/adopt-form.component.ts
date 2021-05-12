@@ -3,7 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {AdoptPetService} from "../shared/adopt-pet.service";
 import {Pet} from "../shared/adopt-pet.model";
 import {PersonModel} from "../shared/person.model";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-adopt-form',
@@ -21,7 +21,8 @@ export class AdoptFormComponent implements OnInit {
     pNumber: new FormControl('')
   })
 
-  constructor(private petService: AdoptPetService, private route: ActivatedRoute) { }
+  constructor(private petService: AdoptPetService, private route: ActivatedRoute
+                ,private router: Router) { }
 
   ngOnInit(): void {
     this.id = parseInt(this.route.snapshot.paramMap.get('id'))
@@ -36,8 +37,6 @@ export class AdoptFormComponent implements OnInit {
         email: this.personForm.get('email').value,
       }
       this.petService.createPerson(person, petId);
-  }
-  goBack() {
-
+      this.router.navigateByUrl('/adopt-pet')
   }
 }
