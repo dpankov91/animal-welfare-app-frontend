@@ -7,9 +7,9 @@
           <h4 class="headers">Pets</h4>
         </div>
         <div class="card-body ">
-          <div *ngIf="allPets$ | async as pets">
+          <div *ngIf="allPets">
             <ul>
-              <li class="petList" *ngFor="let pet of pets" (click)="loadSelectedPet(pet)">
+              <li class="petList" *ngFor="let pet of allPets" (click)="loadSelectedPet(pet)">
                 {{pet.name}} - {{pet.type}}
               </li>
             </ul>

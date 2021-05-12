@@ -3,6 +3,9 @@ import {AdoptPetService} from './shared/adopt-pet.service';
 import {AdoptPetDto} from './shared/adopt-pet.dto';
 import {Observable, Subject, Subscription} from 'rxjs';
 import {Pet} from './shared/adopt-pet.model';
+import {AdoptPetState} from './state/adopt-pet.state';
+import {Select, Store} from '@ngxs/store';
+import {ListenForPets} from './state/adopt-pet.action';
 // import {Select, Store} from '@ngxs/store';
 // import {AdoptPetState} from './state/adopt-pet.state';
 // import { ListenForPets} from './state/adopt-pet.action';
@@ -13,7 +16,9 @@ import {Pet} from './shared/adopt-pet.model';
   styleUrls: ['./adopt-pet.component.scss']
 })
 export class AdoptPetComponent implements OnInit, OnDestroy {
-  // @Select(AdoptPetState.pets)
+
+  @Select(AdoptPetState.pets) pets: Observable<Pet[]>;
+  allPets: Pet[];
   allPets$: Observable<Pet[]> | undefined;
   pet: AdoptPetDto;
   // allPets: AdoptPetDto[] = [];
@@ -22,18 +27,24 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   petSelected: Pet | undefined;
   // allPets$: Subscription;
 
-  constructor(private petService: AdoptPetService) { }
+  constructor(private petService: AdoptPetService, private store: Store) {
+    this.store.dispatch(
+      new ListenForPets()
+    );
+  }
 
   ngOnInit(): void {
     console.log('Page loaded');
-    this.allPets$ = this.petService.getAllPets();
-    this.petService.getPets();
 
+
+    this.pets.subscribe((data) => {
+      console.table(data);
+      this.allPets = data;
+    });
     // this.allPets$ = this.store.dispatch(new ListenForPets());
     // this.petService.getPets();
 
     // this.store.dispatch(new GetAllPets());
-    console.log('Pets in Frontend:' + this.allPets$);
       // .pipe(
       // takeUntil(this.unsubscribe$)
       // ).subscribe(pets => {

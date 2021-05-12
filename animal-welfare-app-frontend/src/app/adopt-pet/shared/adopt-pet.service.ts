@@ -23,6 +23,13 @@ export class AdoptPetService {
     this.socket.emit('allPets', null);
   }
 
+   getStatePets(): Observable<any>{
+    console.log('pets');
+    this.socket.emit('allPets', null);
+    return this.socket
+      .fromEvent<Pet[]>('allPets');
+  }
+
   createPet(pet: Pet): void {
     console.log('pet===' + pet.name);
     this.socket.emit('add-pet', pet);
