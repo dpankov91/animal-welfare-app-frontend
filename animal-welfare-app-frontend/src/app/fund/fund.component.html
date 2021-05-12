@@ -1,1 +1,9 @@
-<p>fund works!</p>
+<div *ngIf="allFunds$ | async as funds">
+  <ul>
+    <li class="fundsList" *ngFor="let eachFund of funds">
+     {{eachFund.id}}: {{eachFund.charityName}}:{{eachFund.description}}:{{eachFund.website}}:
+    {{eachFund.email}}:{{eachFund.totalIncome}}:{{eachFund.telNumber}}
+
+    </li>
+  </ul>
+</div>
