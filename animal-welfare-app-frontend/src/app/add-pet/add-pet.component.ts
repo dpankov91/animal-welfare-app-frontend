@@ -11,7 +11,10 @@ import {AdoptPetService} from '../adopt-pet/shared/adopt-pet.service';
 export class AddPetComponent implements OnInit {
   petForm = this.fb.group({
     name: [''],
-    description: ['']
+    description: [''],
+    age: [''],
+    type: [''],
+    address: ['']
   });
   petCreate: Pet | undefined;
   error: string | undefined;

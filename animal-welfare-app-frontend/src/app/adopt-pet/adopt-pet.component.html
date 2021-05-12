@@ -10,7 +10,7 @@
           <div *ngIf="allPets$ | async as pets">
             <ul>
               <li class="petList" *ngFor="let pet of pets" (click)="loadSelectedPet(pet)">
-                {{pet.name}} - {{pet.description}}
+                {{pet.name}} - {{pet.type}}
               </li>
             </ul>
           </div>
@@ -27,9 +27,9 @@
           <h4 class="headers">Selected Pet</h4>
         </div>
         <div class="card-body selStockDiv" *ngIf="petSelected">
-          <h2 id="stockName">{{petSelected.name}}</h2>
+          <h2 id="petName">{{petSelected.name}}</h2>
           <br>
-          <h4 id="stockDescription">{{petSelected.description}}</h4>
+          <h4 id="petDescription">{{petSelected.description}}</h4>
           <br>
           <br>
           <br>
