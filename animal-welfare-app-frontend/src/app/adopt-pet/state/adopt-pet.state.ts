@@ -7,14 +7,14 @@ import {AdoptPetService} from '../shared/adopt-pet.service';
 
 export interface AdoptPetStateModel {
   pets: Pet[];
-  pet: Pet;
+  // pet: Pet;
 }
 
 @State<AdoptPetStateModel>({
   name: 'adopt-pet',
   defaults: {
     pets: [],
-    pet: {id: 4, name: 'd', description: 'Pezer'},
+    // pet: {id: 4, name: 'd', description: 'Pezer'},
   }
 })
 @Injectable()
@@ -28,33 +28,27 @@ export class AdoptPetState{
 
   @Action(ListenForPets)
   getPets(ctx: StateContext<AdoptPetStateModel>): void {
-    this.petService.getAllPets().subscribe(pets => {
+    this.petService.getAllPets().subscribe(data => {
       const state = ctx.getState();
-      const getPetsState: AdoptPetStateModel = {
+      const newState: AdoptPetStateModel = {
         ...state,
-        pets: [{id: 22, name: 'Slayer', description: 'dd'}]
+        pets: data
       };
-      ctx.setState(getPetsState);
+      ctx.setState(newState);
     });
-    // ctx.setState({
-    //   ...state,
-    //   pets: [{id: 22, name: 'Slayer', description: 'dd'}]
-    // });
 
   }
 
   @Action(GetAllPets)
   getAllPets(ctx: StateContext<AdoptPetStateModel>): void {
-        const states = ctx.getState();
-        const pets = states.pet({
-     if(pets){
-       this.petService.getPets({
-         id: pets.id,
-         name: pets.name,
-         description: pets.description
-       });
-     }
-   });
-        ctx.setState(pets);
+    // this.petService.getPets()
+    //   .subscribe(data => {
+    //   const state = ctx.getState();
+    //   const newState: AdoptPetStateModel = {
+    //     ...state,
+    //     pets: data
+    //   };
+    //   ctx.setState(newState);
+    // });
   }
 }
