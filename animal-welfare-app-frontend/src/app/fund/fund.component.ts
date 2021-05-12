@@ -14,10 +14,18 @@ export class FundComponent implements OnInit {
   constructor(private fundsService: FundService) { }
 
   ngOnInit(): void {
+<<<<<<< Updated upstream
   this.allFunds$ = this.fundsService.getAllFunds();
   }
 
   getFundsByCharityName(): void {
     this.fund$ = this.fundsService.getFundsByCharityName();
   }
+=======
+    this.allFunds$ = this.fundsService.getAllFunds();
+    this.fund$ = this.fundsService.getFundsByCharityName();
+    this.fundsService.getCharityName();
+    this.fundsService.getFundsFromCharity();
+  }
+>>>>>>> Stashed changes
 }

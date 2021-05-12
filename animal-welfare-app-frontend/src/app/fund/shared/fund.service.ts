@@ -10,6 +10,13 @@ export class FundService {
 
   constructor(private socket: Socket) { }
 
+<<<<<<< Updated upstream
+=======
+  getFundsFromCharity(): void {
+    this.socket.emit('allFundsFromCharity');
+  }
+
+>>>>>>> Stashed changes
   getAllFunds(): Observable<FundDto[]> {
     return this.socket.fromEvent<FundDto[]>('allFunds');
 
@@ -17,4 +24,11 @@ export class FundService {
   getFundsByCharityName(): Observable<FundDto> {
     return this.socket.fromEvent<FundDto>('charityName');
   }
+<<<<<<< Updated upstream
+=======
+
+  getCharityName(): void{
+    this.socket.emit('getCharityName');
+  }
+>>>>>>> Stashed changes
 }
