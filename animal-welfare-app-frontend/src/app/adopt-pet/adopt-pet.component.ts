@@ -2,11 +2,10 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AdoptPetService} from './shared/adopt-pet.service';
 import {AdoptPetDto} from './shared/adopt-pet.dto';
 import {Observable, Subject, Subscription} from 'rxjs';
-
 import {Pet} from './shared/adopt-pet.model';
-import {Select, Store} from '@ngxs/store';
-import {AdoptPetState} from './state/adopt-pet.state';
-import {GetAllPets, ListenForPets} from './state/adopt-pet.action';
+// import {Select, Store} from '@ngxs/store';
+// import {AdoptPetState} from './state/adopt-pet.state';
+// import { ListenForPets} from './state/adopt-pet.action';
 
 @Component({
   selector: 'app-adopt-pet',
@@ -14,7 +13,8 @@ import {GetAllPets, ListenForPets} from './state/adopt-pet.action';
   styleUrls: ['./adopt-pet.component.scss']
 })
 export class AdoptPetComponent implements OnInit, OnDestroy {
-  @Select(AdoptPetState.pets) allPets$: Observable<Pet[]> | undefined;
+  // @Select(AdoptPetState.pets)
+  allPets$: Observable<Pet[]> | undefined;
   pet: AdoptPetDto;
   // allPets: AdoptPetDto[] = [];
 
@@ -22,15 +22,17 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   petSelected: Pet | undefined;
   // allPets$: Subscription;
 
-  constructor(private petService: AdoptPetService, private store: Store) { }
+  constructor(private petService: AdoptPetService) { }
 
   ngOnInit(): void {
     console.log('Page loaded');
-    // this.allPets$ = this.petService.getAllPets();
+    this.allPets$ = this.petService.getAllPets();
+    this.petService.getPets();
+
+    // this.allPets$ = this.store.dispatch(new ListenForPets());
     // this.petService.getPets();
 
-    this.store.dispatch(new ListenForPets());
-    this.store.dispatch(new GetAllPets());
+    // this.store.dispatch(new GetAllPets());
     console.log('Pets in Frontend:' + this.allPets$);
       // .pipe(
       // takeUntil(this.unsubscribe$)
