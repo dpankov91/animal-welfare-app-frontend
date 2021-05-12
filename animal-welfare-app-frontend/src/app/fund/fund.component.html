@@ -7,7 +7,14 @@
           <h4 class="headers">Funds</h4>
         </div>
         <div class="card-body ">
-          WWE
+          <div *ngIf="allFunds$ | async as funds">
+            <ul>
+              <li class="fundsList" *ngFor="let eachFund of funds">
+                {{eachFund.charityName}}:{{eachFund.totalIncome}}
+
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
