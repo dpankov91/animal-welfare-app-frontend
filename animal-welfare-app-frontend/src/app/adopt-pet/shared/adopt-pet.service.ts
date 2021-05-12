@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {AdoptPetDto} from './adopt-pet.dto';
 import {SocketAdopt} from '../../app.module';
 import {Pet} from './adopt-pet.model';
+import {PersonModel} from "./person.model";
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,15 @@ export class AdoptPetService {
   }
 
   createPet(pet: Pet): void {
+    console.log("pet===" + pet.name)
     this.socket.emit('add-pet', pet);
+  }
+
+  createPerson(person: PersonModel, petId: number): void {
+    console.log("emitting== " + person.firstName + " " + "Id ==" + petId)
+    person.pet = {
+      id: petId
+    }
+    this.socket.emit('create-person', person);
   }
 }

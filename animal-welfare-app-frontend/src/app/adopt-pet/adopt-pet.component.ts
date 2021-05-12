@@ -4,6 +4,7 @@ import {AdoptPetDto} from './shared/adopt-pet.dto';
 import {Observable, Subject, Subscription} from 'rxjs';
 
 import {Pet} from './shared/adopt-pet.model';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-adopt-pet',
@@ -19,7 +20,7 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   petSelected: Pet | undefined;
   // allPets$: Subscription;
 
-  constructor(private petService: AdoptPetService) { }
+  constructor(private petService: AdoptPetService, private router: Router) { }
 
   ngOnInit(): void {
     //this.refresh();
@@ -47,5 +48,9 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   // }
   loadSelectedPet(pet: Pet): void {
     this.petSelected = pet;
+  }
+
+  goAddPerson(petSelected: Pet) {
+    this.router.navigate(['adopt-form/', petSelected.id])
   }
 }
