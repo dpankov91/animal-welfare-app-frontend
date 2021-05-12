@@ -23,7 +23,7 @@ export class SocketAdopt extends Socket{
 @Injectable()
 export class SocketFunds extends Socket{
   constructor() {
-    super({url: 'http://localhost:3300', options: {} });
+    super({url: 'http://localhost:3002', options: {} });
   }
 }
 @NgModule({
