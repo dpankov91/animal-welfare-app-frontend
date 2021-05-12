@@ -6,8 +6,7 @@ import {AddPetComponent} from '../add-pet/add-pet.component';
 import {AdoptFormComponent} from "./adopt-form/adopt-form.component";
 
 const routes: Routes = [{ path: '', component: AdoptPetComponent },
-  {path: 'add-pet', component: AddPetComponent},
-  {path: 'adopt-form', component: AdoptFormComponent}];
+  {path: 'add-pet', component: AddPetComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

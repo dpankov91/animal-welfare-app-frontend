@@ -28,16 +28,15 @@ export class AdoptFormComponent implements OnInit {
   }
 
   savePerson() {
+       const petId = this.id;
        const person: PersonModel = {
         firstName: this.personForm.get('firstName').value,
         lastName: this.personForm.get('lastName').value,
         phoneNumber: this.personForm.get('pNumber').value,
         email: this.personForm.get('email').value,
-        petId: this.id
       }
-      this.petService.createPerson(person);
+      this.petService.createPerson(person, petId);
   }
-
   goBack() {
 
   }
