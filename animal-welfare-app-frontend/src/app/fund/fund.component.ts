@@ -10,14 +10,20 @@ import {FundDto} from './shared/fund.dto';
 })
 export class FundComponent implements OnInit {
   allFunds$: Observable<FundDto[]> | undefined;
+  fund: FundDto | undefined;
 
   constructor(private fundService: FundService) { }
 
   ngOnInit(): void {
     this.allFunds$ = this.fundService.getAllFunds();
     this.fundService.listenForAllFunds();
+    // this.fund$ = this.fundService.getFundsByCharityName();
+    // this.fundService.listenForCharityName();
     console.log(this.allFunds$);
 
   }
 
+  getSelectedFunds(eachFund: FundDto): void{
+    this.fund = eachFund;
+  }
 }

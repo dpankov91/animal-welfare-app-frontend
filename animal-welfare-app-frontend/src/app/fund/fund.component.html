@@ -7,10 +7,16 @@
           <h4 class="headers">Funds</h4>
         </div>
         <div class="card-body ">
+          <p>
+            Charity Name
+          </p>
+          <p>
+            Total Income
+          </p>
           <div *ngIf="allFunds$ | async as funds">
             <ul>
-              <li class="fundsList" *ngFor="let eachFund of funds">
-                {{eachFund.charityName}}:{{eachFund.totalIncome}}
+              <li class="fundsList" *ngFor="let eachFund of funds" (click)="getSelectedFunds(eachFund)">
+                {{eachFund.charityName}}  {{eachFund.totalIncome}}
 
               </li>
             </ul>
@@ -24,10 +30,10 @@
         <div class="card-header ">
           <h4 class="headers">Selected Fund</h4>
         </div>
-        <div class="card-body selStockDiv">
-          <h2 id="stockName">Fund Name/Logo</h2>
+        <div class="card-body selStockDiv" *ngIf="fund">
+          <h2 id="stockName">{{fund.charityName}}</h2>
           <br>
-          <h4 id="stockDescription">Fund Description</h4>
+          <h4 id="stockDescription">{{fund.description}}</h4>
           <br>
           <br>
           <br>

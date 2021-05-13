@@ -19,4 +19,10 @@ export class FundService {
     return this.socket.fromEvent<FundDto[]>('allFunds');
 
   }
+  /*listenForCharityName(): void{
+    this.socket.emit('getCharityName');
+  }
+  getFundsByCharityName(): Observable<FundDto>{
+    return this.socket.fromEvent<FundDto>('getCharityName');
+  }*/
 }
