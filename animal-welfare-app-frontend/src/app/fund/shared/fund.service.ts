@@ -3,6 +3,7 @@ import {Socket} from 'ngx-socket-io';
 import {Observable} from 'rxjs';
 import {SocketFunds} from '../../app.module';
 import {FundDto} from './fund.dto';
+import {UpdateMoneyDto} from './update-money.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,10 @@ export class FundService {
   getFundsByCharityName(): Observable<FundDto>{
     return this.socket.fromEvent<FundDto>('getCharityName');
   }*/
+
+
+  updatePrice(dto: UpdateMoneyDto): void {
+    console.log(dto.donationAmount);
+    this.socket.emit('donationAmount', dto);
+  }
 }
