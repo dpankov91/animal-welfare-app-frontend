@@ -29,7 +29,7 @@ export class FundService {
 
 
   updatePrice(dto: UpdateMoneyDto): void {
-    console.log(dto.donationAmount);
+    console.log(dto.donationAmount + "+++" + dto.id);
     this.socket.emit('donationAmount', dto);
   }
 }

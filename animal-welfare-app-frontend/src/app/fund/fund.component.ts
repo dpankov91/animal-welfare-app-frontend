@@ -34,6 +34,6 @@ export class FundComponent implements OnInit {
   if (this.fund.id && !Number.isNaN(this.donationAmount.value)){
     const dto: UpdateMoneyDto = {id: this.fund.id, donationAmount: this.donationAmount.value};
     this.fundService.updatePrice(dto);
-  }
+    }
   }
 }
