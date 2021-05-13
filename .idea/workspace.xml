@@ -23,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/fund.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/shared/fund.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/fund/shared/fund.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1620762185320" duration="5000" />
       <workItem from="1620762240003" duration="652000" />
       <workItem from="1620805977512" duration="5241000" />
-      <workItem from="1620928235160" duration="1171000" />
+      <workItem from="1620928235160" duration="1519000" />
     </task>
     <servers />
   </component>
