@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Pet} from '../adopt-pet/shared/adopt-pet.model';
 import {FormBuilder} from '@angular/forms';
 import {AdoptPetService} from '../adopt-pet/shared/adopt-pet.service';
-import {Router} from "@angular/router";
+import {Store} from '@ngxs/store';
+import {CreatePet} from '../adopt-pet/state/adopt-pet.action';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-add-pet',
@@ -20,16 +23,20 @@ export class AddPetComponent implements OnInit {
   petCreate: Pet | undefined;
   error: string | undefined;
 
-  constructor(private fb: FormBuilder, private petService: AdoptPetService
-    ,private router: Router) { }
+
+
+
+  constructor(private fb: FormBuilder, private petService: AdoptPetService, private store: Store, private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  createPet() {
+  createPet(): void {
     this.error = undefined;
     const pet: Pet = this.petForm.value;
-    this.petService.createPet(pet);
-    this.router.navigateByUrl('/adopt-pet')
+    // this.petService.createPet(pet);
+    this.store.dispatch(new CreatePet(pet));
+    this.route.navigateByUrl('/adopt-pet');
+
   }
 }

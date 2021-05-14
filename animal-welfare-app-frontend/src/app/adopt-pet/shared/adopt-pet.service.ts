@@ -30,9 +30,9 @@ export class AdoptPetService {
       .fromEvent<Pet[]>('allPets');
   }
 
-  createPet(pet: Pet): void {
+  createPet(pet: Pet): Observable<any> {
     console.log('pet===' + pet.name);
-    this.socket.emit('add-pet', pet);
+    return this.socket.emit('add-pet', pet);
   }
 
   createPerson(person: PersonModel, petId: number): void {
