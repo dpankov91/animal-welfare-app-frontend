@@ -1,7 +1,7 @@
-<<div class="container">
+<div class="container">
   <div class="row upperDiv">
     <div class="col-md-4 headText" style="background: #005AA1;">
-      <h1>Add your pet</h1>
+      <h1>Help your pet find a new home</h1>
     </div>
     <div class="col-md-8 p-0">
       <img src="assets/kitties.png" class="fixed-content">
@@ -11,7 +11,7 @@
 <div class="container">
   <form class="submission-form" [formGroup]="petForm" (ngSubmit)="createPet()">
     <label for="name">Name: </label>
-    <input type="text" formControlName="name" id="name">
+    <input type="text" formControlName="name" id="name" placeholder="Pet name">
     <label for="description">Description: </label>
     <input type="text" formControlName="description" id="description">
     <label for="age">Age: </label>

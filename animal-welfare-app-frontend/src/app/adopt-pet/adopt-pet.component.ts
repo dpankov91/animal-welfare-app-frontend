@@ -6,7 +6,7 @@ import {Pet} from './shared/adopt-pet.model';
 import {AdoptPetState} from './state/adopt-pet.state';
 import {Select, Store} from '@ngxs/store';
 import {ListenForPets} from './state/adopt-pet.action';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 // import {Select, Store} from '@ngxs/store';
 // import {AdoptPetState} from './state/adopt-pet.state';
 // import { ListenForPets} from './state/adopt-pet.action';
@@ -29,7 +29,7 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   // allPets$: Subscription;
 
   constructor(private petService: AdoptPetService, private store: Store
-    ,private router: Router) {
+    ,         private router: Router) {
     this.store.dispatch(
       new ListenForPets()
     );
@@ -65,6 +65,6 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   }
 
   goAddPerson(petSelected: Pet) {
-    this.router.navigate(['adopt-form/', petSelected.id])
+    this.router.navigate(['adopt-form/', petSelected.id]);
   }
 }
