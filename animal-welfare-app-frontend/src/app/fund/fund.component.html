@@ -7,12 +7,26 @@
           <h4 class="headers">Funds</h4>
         </div>
         <div class="card-body ">
-          <p>
-            Charity Name
+
+            <p class="d-block p-2 bg-dark text-white text left">
+            <strong>
+              <mark>
+                  Charity Name
+              </mark>
+            </strong>
           </p>
-          <p>
-            Total Income
-          </p>
+
+
+           <p class="d-block p-2 bg-dark text-white text right">
+             <strong>
+               <mark>
+                  Total Income
+               </mark>
+             </strong>
+           </p>
+
+
+
           <div *ngIf="allFunds$ | async as funds">
             <ul>
               <li class="fundsList" *ngFor="let eachFund of funds" (click)="getSelectedFunds(eachFund)">
@@ -42,10 +56,10 @@
               <span class="input-group-text" id="basic-addon1">$</span>
             </div>
             <input type="number" class="form-control"  placeholder="" aria-label="Price" aria-describedby="basic-addon1"
-                   >
+            [formControl]="donationAmount">
           </div>
           <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" >Donate Money</button>
+            <button type="button" class="btn btn-info btn-upd" (click)="updateAmount(fund.totalIncome)">Donate Money</button>
           </div>
         </div>
       </div>
