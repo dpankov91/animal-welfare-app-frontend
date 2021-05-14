@@ -6,6 +6,7 @@ import {Pet} from './shared/adopt-pet.model';
 import {AdoptPetState} from './state/adopt-pet.state';
 import {Select, Store} from '@ngxs/store';
 import {ListenForPets} from './state/adopt-pet.action';
+import {ActivatedRoute, Router} from "@angular/router";
 // import {Select, Store} from '@ngxs/store';
 // import {AdoptPetState} from './state/adopt-pet.state';
 // import { ListenForPets} from './state/adopt-pet.action';
@@ -27,7 +28,8 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   petSelected: Pet | undefined;
   // allPets$: Subscription;
 
-  constructor(private petService: AdoptPetService, private store: Store) {
+  constructor(private petService: AdoptPetService, private store: Store
+    ,private router: Router) {
     this.store.dispatch(
       new ListenForPets()
     );
@@ -58,10 +60,11 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  // refresh(): any {
-  //   this.allPets$ = this.petService.getAllPets();
-  // }
   loadSelectedPet(pet: Pet): void {
     this.petSelected = pet;
+  }
+
+  goAddPerson(petSelected: Pet) {
+    this.router.navigate(['adopt-form/', petSelected.id])
   }
 }
