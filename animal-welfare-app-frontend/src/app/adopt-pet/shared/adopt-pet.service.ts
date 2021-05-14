@@ -31,7 +31,7 @@ export class AdoptPetService {
   createPerson(person: PersonModel, petId: number): void {
     console.log('emitting== ' + person.firstName + ' ' + 'Id ==' + petId);
     person.pet = {
-      address: '', age: 0, description: '', name: '', type: '',
+      address: '', age: '', description: '', name: '', type: '',
       id: petId
     };
     this.socket.emit('create-person', person);
