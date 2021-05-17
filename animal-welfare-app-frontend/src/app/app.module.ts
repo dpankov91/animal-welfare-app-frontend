@@ -12,6 +12,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {NgxsModule} from '@ngxs/store';
 import {environment} from '../environments/environment';
 import {AdoptPetState} from './adopt-pet/state/adopt-pet.state';
+import {FundState} from './fund/state/fund.state';
 
 @Injectable()
 export class SocketAdopt extends Socket{
@@ -39,7 +40,7 @@ export class SocketFunds extends Socket{
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    NgxsModule.forRoot([AdoptPetState], {
+    NgxsModule.forRoot([AdoptPetState, FundState], {
       developmentMode: !environment.production
     })
   ],

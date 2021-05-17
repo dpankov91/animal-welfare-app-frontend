@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FundService} from './fund/shared/fund.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'animal-welfare-app-frontend';
+  constructor() {
+
+  }
 }

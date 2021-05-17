@@ -27,7 +27,7 @@
 
 
 
-          <div *ngIf="allFunds$ | async as funds">
+          <div *ngIf="funds">
             <ul>
               <li class="fundsList" *ngFor="let eachFund of funds" (click)="getSelectedFunds(eachFund)">
                 {{eachFund.charityName}}  {{eachFund.totalIncome}}
@@ -59,7 +59,7 @@
             [formControl]="donationAmount">
           </div>
           <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" (click)="updateAmount(fund.totalIncome)">Donate Money</button>
+            <button type="button" class="btn btn-info btn-upd" (click)="updateAmount()">Donate Money</button>
           </div>
         </div>
       </div>

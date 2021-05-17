@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {SocketFunds} from '../../app.module';
 import {FundDto} from './fund.dto';
 import {UpdateMoneyDto} from './update-money.dto';
+import {Pet} from '../../adopt-pet/shared/adopt-pet.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,16 +21,10 @@ export class FundService {
     return this.socket.fromEvent<FundDto[]>('allFunds');
 
   }
-  /*listenForCharityName(): void{
-    this.socket.emit('getCharityName');
-  }
-  getFundsByCharityName(): Observable<FundDto>{
-    return this.socket.fromEvent<FundDto>('getCharityName');
-  }*/
-
 
   updatePrice(dto: UpdateMoneyDto): void {
-    console.log(dto.donationAmount + "+++" + dto.id);
+    console.log(dto.donationAmount + '+++' + dto.id);
     this.socket.emit('donationAmount', dto);
   }
+
 }
