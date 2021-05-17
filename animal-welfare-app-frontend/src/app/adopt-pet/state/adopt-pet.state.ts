@@ -10,14 +10,12 @@ import {take, tap} from 'rxjs/operators';
 
 export interface AdoptPetStateModel {
   pets: Pet[];
-
 }
 
 @State<AdoptPetStateModel>({
   name: 'AdoptPet',
   defaults: {
     pets: [],
-
   }
 })
 @Injectable()
