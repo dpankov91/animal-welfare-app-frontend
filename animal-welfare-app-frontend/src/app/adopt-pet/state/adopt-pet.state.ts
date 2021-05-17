@@ -3,6 +3,8 @@ import {Injectable} from '@angular/core';
 import {Pet} from '../shared/adopt-pet.model';
 import {CreatePet, ListenForPets} from './adopt-pet.action';
 import {AdoptPetService} from '../shared/adopt-pet.service';
+import {Observable} from 'rxjs';
+import {take, tap} from 'rxjs/operators';
 
 
 
@@ -45,46 +47,18 @@ export class AdoptPetState{
   }
 
   @Action(CreatePet)
-  createPet({getState, setState}: StateContext<AdoptPetStateModel>, {pet}: CreatePet) {
+  createPet({getState, setState}: StateContext<AdoptPetStateModel>, {pet}: CreatePet): void {
     console.log(pet);
-    return this.petService.createPet(pet).subscribe(data => {
-      const state = getState();
-      setState({
-        pets: [...state.pets, data]
-      });
-    });
-
-    // then((result) => {
-    //   const state = getState();
-    //   patch({
-    //     pets: [...state.pets, result]
-    //   });
-    // });
-
-    // return this.petService.createPet(pet).pipe(tap((result) => {
-    //   const state = getState();
-    //   patchState({
-    //     pets: [...state.pets, result]
-    //   });
-    // }));
-
-
-    // return this.petService.createPet(pet).pipe(tap((data) => {
-    //   const state = getState();
-    //   patchState({
-    //     pets: [...state.pets, data]
-    //   });
-    // }));
-
-
-    //   .subscribe(data => {
-    //   const state = ctx.getState();
-    //   const newState: AdoptPetStateModel = {
-    //     ... state,
-    //     pets: data
-    //   };
-    //   ctx.setState(newState);
-    // });
+    this.petService.listenForCreatePet().pipe(
+      take(1),
+      tap(data => {
+        const state = getState();
+        setState({
+          pets: [...state.pets, data]
+        });
+      })
+    ).subscribe();
+    this.petService.createPet(pet);
   }
 
 }

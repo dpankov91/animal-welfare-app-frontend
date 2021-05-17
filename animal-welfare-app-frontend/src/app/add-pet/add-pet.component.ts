@@ -37,6 +37,5 @@ export class AddPetComponent implements OnInit {
     // this.petService.createPet(pet);
     this.store.dispatch(new CreatePet(pet));
     this.route.navigateByUrl('/adopt-pet');
-
   }
 }
