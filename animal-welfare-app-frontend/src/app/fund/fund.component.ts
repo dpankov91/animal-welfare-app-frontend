@@ -32,7 +32,7 @@ export class FundComponent implements OnInit {
 
   updateAmount(oldAmount: number): void {
   if (this.fund.id && !Number.isNaN(this.donationAmount.value)){
-    const dto: UpdateMoneyDto = {id: this.fund.id, donationAmount: this.donationAmount.value+oldAmount};
+    const dto: UpdateMoneyDto = {id: this.fund.id, donationAmount: this.donationAmount.value + oldAmount};
     this.fundService.updatePrice(dto);
     }
   }
