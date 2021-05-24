@@ -14,10 +14,12 @@ export class FundService {
   constructor(private socket: SocketFunds) { }
 
   listenForAllFunds(): void {
+    // Listening for the funds in the backend
     this.socket.emit('allFundsFromCharity');
   }
 
   getAllFunds(): Observable<FundDto[]> {
+    // Receiving the information.
     return this.socket.fromEvent<FundDto[]>('allFunds');
 
   }
