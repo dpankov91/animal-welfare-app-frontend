@@ -56,5 +56,6 @@ export class FundComponent implements OnInit {
 
     this.store.dispatch(new UpdateDonation(dto));
     }
+    this.donationAmount.reset();
   }
 }

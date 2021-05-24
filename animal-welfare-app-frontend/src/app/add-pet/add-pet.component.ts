@@ -23,9 +23,6 @@ export class AddPetComponent implements OnInit {
   petCreate: Pet | undefined;
   error: string | undefined;
 
-
-
-
   constructor(private fb: FormBuilder, private petService: AdoptPetService, private store: Store, private route: Router) { }
 
   ngOnInit(): void {
@@ -34,7 +31,6 @@ export class AddPetComponent implements OnInit {
   createPet(): void {
     this.error = undefined;
     const pet: Pet = this.petForm.value;
-    // this.petService.createPet(pet);
     this.store.dispatch(new CreatePet(pet));
     this.route.navigateByUrl('/adopt-pet');
   }

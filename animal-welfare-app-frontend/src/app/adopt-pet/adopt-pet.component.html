@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mainCont">
   <div class="row vh-100" style="padding-top: 60px; padding-bottom: 20px">
 
     <div class="col-5">
@@ -6,45 +6,52 @@
         <div class="card-header">
           <h4 class="headers">Pets</h4>
         </div>
-        <div class="card-body ">
+        <div class="card-body fixed-content selFundDiv">
+          <button type="button" class="btn btn-info" routerLink="add-pet" style="width: 100%">Add new pet</button>
           <div *ngIf="allPets">
-            <ul>
-              <li class="petList" *ngFor="let pet of allPets" (click)="loadSelectedPet(pet)">
-                {{pet.name}} - {{pet.type}}
-              </li>
-            </ul>
-          </div>
-          <div *ngIf="allPersons">
-            <ul>
-              <li class="stockList" *ngFor="let person of allPersons">
-                {{person.firstName}} - {{person.petId}}
-              </li>
-            </ul>
-          </div>
-          <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" routerLink="add-pet">Add new pet</button>
-          </div>
-          <div>
-            <button type="button" class="btn btn-info" (click)="getAllPetIdFromPersons()">Test</button>
+            <table class="table table-hover">
+              <thead>
+              <tr class="tableHeaders">
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+              </tr>
+              </thead>
+              <tbody >
+              <tr class="fundList fixed-content" *ngFor="let pet of notBookedPets" (click)="loadSelectedPet(pet)">
+                <td>{{pet.name}}</td>
+                <td>{{pet.type}}</td>
+              </tr>
+              </tbody>
+            </table>
+            <br>
+            <p style="text-align: center" *ngIf="bookedPets">Currently reserved pets</p>
+            <table class="table table-hover">
+              <tbody >
+              <tr class="fundList fixed-content" style="color: red" *ngFor="let pet of bookedPets" (click)="loadSelectedPet(pet)">
+                <td>{{pet.name}}</td>
+                <td>{{pet.type}}</td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-
     <div class="col-7" >
       <div class="card h-100 border" >
         <div class="card-header ">
           <h4 class="headers">Selected Pet</h4>
         </div>
-        <div class="card-body selStockDiv" *ngIf="petSelected">
+        <div class="card-body fixed-content selFundDiv" *ngIf="petSelected">
           <h2 id="petName">{{petSelected.name}}</h2>
           <br>
           <h4 id="petDescription">{{petSelected.description}}</h4>
           <br>
+          <h5>Age: {{petSelected.age}}</h5>
+          <h5>Address: {{petSelected.address}}</h5>
           <br>
-          <br>
-          <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" (click)="goAddPerson(petSelected)">Adopt pet</button>
+          <div *ngIf="petSelected.isBooked == false">
+            <button type="button" class="btn btn-info" style="width: 100%" (click)="goAddPerson(petSelected)">Adopt pet</button>
           </div>
         </div>
       </div>

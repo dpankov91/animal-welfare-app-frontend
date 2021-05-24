@@ -20,9 +20,6 @@
   text-align: center;
 }
 
-.btn-holder {
-}
-
 .upd-del-btn{
   position: absolute;
   bottom: 50px;
@@ -51,16 +48,43 @@
   font-family: null;
 }
 
-.stockList{
-  font-size: 25px;
+.fundList{
+  font-size: 20px;
   cursor: pointer;
   font-family: null;
-  margin: 7px;
+  margin: 2px;
   text-align: center;
   list-style-type: none;
 }
 
-.stockList:hover{
-  background-color: #F6F3F0;
-  border: gray 1px solid;
+.mainDiv{
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
+.card-body{
+  height: 500px;
+}
+.fixed-content {
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.tableHeaders{
+  font-size: 22px;
+  text-align: center;
+  margin: 3px;
+  border: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+#petName{
+  font-size: 45px;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+#petDescription{
+  font-family: 'PT Serif', serif;
+  text-align: center;
+}
+
