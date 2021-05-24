@@ -19,24 +19,20 @@ export class AdoptPetService {
   }
 
   getPets(): void{
-    console.log('pets');
     this.socket.emit('allPets', null);
   }
 
    getStatePets(): Observable<any>{
-    console.log('pets');
     this.socket.emit('allPets', null);
     return this.socket
       .fromEvent<Pet[]>('allPets');
   }
 
   createPet(pet: Pet): void {
-    console.log('pet===');
     this.socket.emit('add-pet', pet);
   }
 
   listenForCreatePet(): Observable<Pet> {
-    console.log('pet2');
     return this.socket.fromEvent('pet-created-success');
   }
 
@@ -46,12 +42,10 @@ export class AdoptPetService {
   }
 
   getPersons(): void{
-    console.log('persons');
     this.socket.emit('allPersons', null);
   }
 
   createPerson(person: PersonModel, petId: number): void {
-    console.log('emitting== ' + person.firstName + ' ' + 'Id ==' + petId);
     person.pet = {
       address: '', age: '', description: '', name: '', type: '', isBooked: null,
       id: petId

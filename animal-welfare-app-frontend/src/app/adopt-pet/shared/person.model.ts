@@ -6,6 +6,5 @@ export interface PersonModel {
   lastName: string,
   email: string,
   phoneNumber: number;
-  petId?: number;
   pet?: Pet;
 }

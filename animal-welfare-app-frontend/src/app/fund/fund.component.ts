@@ -26,8 +26,6 @@ export class FundComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.allFunds$ = this.fundService.getAllFunds();
-    // this.fundService.listenForAllFunds();
     this.allFunds.subscribe((data) => {
       console.table(data);
       if (this.fund){
@@ -35,10 +33,6 @@ export class FundComponent implements OnInit {
       }
       this.funds = data;
     });
-    // this.fund$ = this.fundService.getFundsByCharityName();
-    // this.fundService.listenForCharityName();
-    // console.log(this.allFunds$);
-
   }
 
   getSelectedFunds(eachFund: FundDto): void{
@@ -46,14 +40,9 @@ export class FundComponent implements OnInit {
   }
 
   updateAmount(): void {
-    console.log('Here');
     const numb = Number(this.donationAmount.value);
-    console.log(numb);
     if (this.fund.hasOwnProperty('id') && !isNaN(numb)){
-    console.log('HeEre');
     const dto: UpdateMoneyDto = {id: this.fund.id, donationAmount: this.fund.totalIncome + this.donationAmount.value};
-    // this.fundService.updatePrice(dto);
-
     this.store.dispatch(new UpdateDonation(dto));
     }
     this.donationAmount.reset();

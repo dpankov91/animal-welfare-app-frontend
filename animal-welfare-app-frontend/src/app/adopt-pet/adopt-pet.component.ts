@@ -7,10 +7,6 @@ import {AdoptPetState} from './state/adopt-pet.state';
 import {Select, Store} from '@ngxs/store';
 import {ListenForPets} from './state/adopt-pet.action';
 import {ActivatedRoute, Router} from '@angular/router';
-import {PersonModel} from './shared/person.model';
-// import {Select, Store} from '@ngxs/store';
-// import {AdoptPetState} from './state/adopt-pet.state';
-// import { ListenForPets} from './state/adopt-pet.action';
 
 @Component({
   selector: 'app-adopt-pet',
