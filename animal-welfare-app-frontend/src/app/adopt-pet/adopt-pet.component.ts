@@ -6,8 +6,8 @@ import {Pet} from './shared/adopt-pet.model';
 import {AdoptPetState} from './state/adopt-pet.state';
 import {Select, Store} from '@ngxs/store';
 import {ListenForPets} from './state/adopt-pet.action';
-import {ActivatedRoute, Router} from "@angular/router";
-import {PersonModel} from "./shared/person.model";
+import {ActivatedRoute, Router} from '@angular/router';
+import {PersonModel} from './shared/person.model';
 // import {Select, Store} from '@ngxs/store';
 // import {AdoptPetState} from './state/adopt-pet.state';
 // import { ListenForPets} from './state/adopt-pet.action';
@@ -47,24 +47,24 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   }
 
   getAllPetIdFromPersons(): number[] {
-    for (let person of this.allPersons) {
-      console.log("inside loop")
-      this.petIds.push(person.pet?.id)
+    for (const person of this.allPersons) {
+      console.log('inside loop');
+      this.petIds.push(person.pet?.id);
     }
-    console.log("after loop" + this.petIds[2])
+    console.log('after loop' + this.petIds[2]);
     return this.petIds;
   }
 
   getBookedPets(): Pet[] {
     const ids = this.getAllPetIdFromPersons();
-    for (let id of ids) {
-      this.bookedPets.push(this.allPets.find( pet => pet.id == id))
+    for (const id of ids) {
+      this.bookedPets.push(this.allPets.find( pet => pet.id == id));
     }
     return this.bookedPets;
   }
 
   getNotBookedPets(): Pet[] {
-    this.notBookedPets = this.allPets.filter( b => !this.getBookedPets().includes(b))
+    this.notBookedPets = this.allPets.filter( b => !this.getBookedPets().includes(b));
     return  this.notBookedPets;
   }
 

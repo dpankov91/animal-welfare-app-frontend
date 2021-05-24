@@ -7,33 +7,24 @@
           <h4 class="headers">Funds</h4>
         </div>
         <div class="card-body ">
-
-            <p class="d-block p-2 bg-dark text-white text left">
-            <strong>
-              <mark>
-                  Charity Name
-              </mark>
-            </strong>
-          </p>
-
-
-           <p class="d-block p-2 bg-dark text-white text right">
-             <strong>
-               <mark>
-                  Total Income
-               </mark>
-             </strong>
-           </p>
-
-
-
           <div *ngIf="funds">
-            <ul>
-              <li class="fundsList" *ngFor="let eachFund of funds" (click)="getSelectedFunds(eachFund)">
-                {{eachFund.charityName}}  {{eachFund.totalIncome}}
+            <table class="table table-dark table-hover">
+              <thead>
+              <tr>
+                <th scope="col">Charity Id</th>
+                <th scope="col">Charity Name</th>
+                <th scope="col">Total Income</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let eachFund of funds" (click)="getSelectedFunds(eachFund)">
+                <td>{{eachFund.id}}</td>
+                <td>{{eachFund.charityName}}</td>
+                <td>{{eachFund.totalIncome}}</td>
 
-              </li>
-            </ul>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -44,22 +35,27 @@
         <div class="card-header ">
           <h4 class="headers">Selected Fund</h4>
         </div>
-        <div class="card-body selStockDiv" *ngIf="fund">
-          <h2 id="stockName">{{fund.charityName}}</h2>
+        <div class="card-body  selFundDiv" *ngIf="fund">
+          <h2 id="fundName">{{fund.charityName}}</h2>
           <br>
-          <h4 id="stockDescription">{{fund.description}}</h4>
+          <h4 id="fundDescription">{{fund.description}}</h4>
           <br>
           <br>
           <br>
           <div class="input-group mb-3 input-price">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">$</span>
             </div>
-            <input type="number" class="form-control"  placeholder="" aria-label="Price" aria-describedby="basic-addon1"
-            [formControl]="donationAmount">
+            <div class="modal-footer-left">
+              <div>
+
+              </div>
+            </div>
           </div>
-          <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" (click)="updateAmount()">Donate Money</button>
+          <div class="modal-footer">
+            <label class="modal-content ">Enter Amount  </label>
+            <input type="number" class="form-control"  placeholder="" aria-label="Price" aria-describedby="basic-addon1"
+                   [formControl]="donationAmount">
+            <button type="button" class="btn btn-primary" (click)="updateAmount()">Donate Money</button>
           </div>
         </div>
       </div>

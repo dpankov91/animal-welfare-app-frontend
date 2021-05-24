@@ -26,8 +26,8 @@ export class FundComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   // this.allFunds$ = this.fundService.getAllFunds();
-   // this.fundService.listenForAllFunds();
+    // this.allFunds$ = this.fundService.getAllFunds();
+    // this.fundService.listenForAllFunds();
     this.allFunds.subscribe((data) => {
       console.table(data);
       if (this.fund){
@@ -49,7 +49,7 @@ export class FundComponent implements OnInit {
     console.log('Here');
     const numb = Number(this.donationAmount.value);
     console.log(numb);
-  if (this.fund.hasOwnProperty('id') && !isNaN(numb)){
+    if (this.fund.hasOwnProperty('id') && !isNaN(numb)){
     console.log('HeEre');
     const dto: UpdateMoneyDto = {id: this.fund.id, donationAmount: this.fund.totalIncome + this.donationAmount.value};
     // this.fundService.updatePrice(dto);
