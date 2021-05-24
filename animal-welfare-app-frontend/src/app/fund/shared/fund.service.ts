@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Socket} from 'ngx-socket-io';
 import {Observable} from 'rxjs';
 import {SocketFunds} from '../../app.module';
-import {FundDto} from './fund.dto';
+import {FundDto} from './Dto/fund.dto';
 import {UpdateMoneyDto} from './update-money.dto';
 
 @Injectable({

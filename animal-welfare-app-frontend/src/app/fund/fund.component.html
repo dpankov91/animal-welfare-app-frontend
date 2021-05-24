@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row vh-100" style="padding-top: 60px; padding-bottom: 20px">
+  <div class="row vh-100" style="padding-top: 60px; padding-bottom: 18px">
 
     <div class="col-5">
       <div class="card h-100 border">
@@ -22,12 +22,11 @@
             <td>{{eachFund.totalIncome}}</td>
 
           </tr>
-
           </tbody>
         </table>
-          </div>
-                 </div>
+        </div>
       </div>
+    </div>
 
 
     <div class="col-7" >
@@ -35,22 +34,28 @@
         <div class="card-header ">
           <h4 class="headers">Selected Fund</h4>
         </div>
-        <div class="card-body selStockDiv" *ngIf="fund">
-          <h2 id="stockName">{{fund.charityName}}</h2>
+
+        <div class="card-body selFundDiv" *ngIf="fund">
+          <h2 id="fundName">{{fund.charityName}}</h2>
           <br>
-          <h4 id="stockDescription">{{fund.description}}</h4>
+          <h4 id="fundDescription">{{fund.description}}</h4>
           <br>
           <br>
           <br>
           <div class="input-group mb-3 input-price">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">$</span>
             </div>
-            <input type="number" class="form-control"  placeholder="" aria-label="Price" aria-describedby="basic-addon1"
-            [formControl]="donationAmount">
+            <div class="modal-footer-left">
+              <div>
+
+              </div>
+            </div>
           </div>
-          <div class="upd-del-btn">
-            <button type="button" class="btn btn-info btn-upd" (click)="updateAmount(fund.totalIncome)">Donate Money</button>
+          <div class="modal-footer">
+            <label class="modal-content ">Enter Amount  </label>
+            <input type="number" class="form-control"  placeholder="" aria-label="Price" aria-describedby="basic-addon1"
+                   [formControl]="donationAmount">
+            <button type="button" class="btn btn-primary" (click)="updateAmount(fund.totalIncome)">Donate Money</button>
           </div>
         </div>
       </div>

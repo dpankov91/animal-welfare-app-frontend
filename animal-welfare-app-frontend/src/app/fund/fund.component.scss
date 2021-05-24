@@ -1,6 +1,8 @@
-.selStockDiv{
+.selFundDiv{
   text-align:center;
   position: relative;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
@@ -43,6 +45,8 @@
 .border{
   border-style: groove;
   border-color: #17A2B6;
+  max-height: 500px;
+  height: 100%;
 }
 
 .headers{

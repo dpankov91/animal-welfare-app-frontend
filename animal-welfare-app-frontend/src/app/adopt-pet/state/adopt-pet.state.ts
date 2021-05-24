@@ -10,7 +10,7 @@ export interface AdoptPetStateModel {
 }
 
 @State<AdoptPetStateModel>({
-  name: 'adopt-pet',
+  name: 'AdoptPet',
   defaults: {
     pets: [],
     // pet: {id: 4, name: 'd', description: 'Pezer'},
