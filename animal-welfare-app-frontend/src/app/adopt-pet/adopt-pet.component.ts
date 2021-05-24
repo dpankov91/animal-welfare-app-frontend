@@ -7,6 +7,7 @@ import {AdoptPetState} from './state/adopt-pet.state';
 import {Select, Store} from '@ngxs/store';
 import {ListenForPets} from './state/adopt-pet.action';
 import {ActivatedRoute, Router} from "@angular/router";
+import {PersonModel} from "./shared/person.model";
 // import {Select, Store} from '@ngxs/store';
 // import {AdoptPetState} from './state/adopt-pet.state';
 // import { ListenForPets} from './state/adopt-pet.action';
@@ -22,12 +23,13 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   allPets: Pet[];
   allPets$: Observable<Pet[]> | undefined;
   pet: AdoptPetDto;
-  // allPets: AdoptPetDto[] = [];
-
   unsubscribe$ = new Subject();
   petSelected: Pet | undefined;
-  // allPets$: Subscription;
-
+  allPersons$: Observable<PersonModel[]> | undefined;
+  allPersons: PersonModel[];
+  bookedPets: Pet[];
+  petIds: number[] = [];
+  notBookedPets: Pet[];
   constructor(private petService: AdoptPetService, private store: Store
     ,private router: Router) {
     this.store.dispatch(
@@ -36,25 +38,36 @@ export class AdoptPetComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log('Page loaded');
-
-
-    this.pets.subscribe((data) => {
+      this.pets.subscribe((data) => {
       console.table(data);
       this.allPets = data;
     });
-    // this.allPets$ = this.store.dispatch(new ListenForPets());
-    // this.petService.getPets();
-
-    // this.store.dispatch(new GetAllPets());
-      // .pipe(
-      // takeUntil(this.unsubscribe$)
-      // ).subscribe(pets => {
-      //   this.allPets$ = pets;
-      //   console.log('allPets in Frontend =', pets);
-      // });
-    //
+      this.petService.getPersons();
+      this.petService.getAllPersons().subscribe( data => this.allPersons = data);
   }
+
+  getAllPetIdFromPersons(): number[] {
+    for (let person of this.allPersons) {
+      console.log("inside loop")
+      this.petIds.push(person.pet?.id)
+    }
+    console.log("after loop" + this.petIds[2])
+    return this.petIds;
+  }
+
+  getBookedPets(): Pet[] {
+    const ids = this.getAllPetIdFromPersons();
+    for (let id of ids) {
+      this.bookedPets.push(this.allPets.find( pet => pet.id == id))
+    }
+    return this.bookedPets;
+  }
+
+  getNotBookedPets(): Pet[] {
+    this.notBookedPets = this.allPets.filter( b => !this.getBookedPets().includes(b))
+    return  this.notBookedPets;
+  }
+
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

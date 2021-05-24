@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ab72fbb7-5860-4e4a-9e3f-df6bec41e069" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/adopt-pet.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/adopt-pet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/adopt-pet.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/person.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/animal-welfare-app-frontend/src/app/adopt-pet/shared/person.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adopt-pet-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../animal-welfare-app-backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\dpank\Documents\GitHub\animal-welfare-app-frontend\animal-welfare-app-frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -84,6 +87,11 @@
       <workItem from="1620805977512" duration="5241000" />
       <workItem from="1620928235160" duration="2126000" />
       <workItem from="1620984449202" duration="2108000" />
+      <workItem from="1621238813441" duration="1229000" />
+      <workItem from="1621330357819" duration="6000" />
+      <workItem from="1621349122781" duration="606000" />
+      <workItem from="1621676724655" duration="674000" />
+      <workItem from="1621767739696" duration="10745000" />
     </task>
     <servers />
   </component>
