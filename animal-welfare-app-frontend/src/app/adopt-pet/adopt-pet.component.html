@@ -14,8 +14,18 @@
               </li>
             </ul>
           </div>
+          <div *ngIf="allPersons">
+            <ul>
+              <li class="stockList" *ngFor="let person of allPersons">
+                {{person.firstName}} - {{person.petId}}
+              </li>
+            </ul>
+          </div>
           <div class="upd-del-btn">
             <button type="button" class="btn btn-info btn-upd" routerLink="add-pet">Add new pet</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-info" (click)="getAllPetIdFromPersons()">Test</button>
           </div>
         </div>
       </div>

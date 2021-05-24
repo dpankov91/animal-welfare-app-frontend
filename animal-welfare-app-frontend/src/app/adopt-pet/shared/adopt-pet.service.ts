@@ -40,6 +40,16 @@ export class AdoptPetService {
     return this.socket.fromEvent('pet-created-success');
   }
 
+  getAllPersons(): Observable<PersonModel[]>{
+    return this.socket
+      .fromEvent<PersonModel[]>('allPersons');
+  }
+
+  getPersons(): void{
+    console.log('persons');
+    this.socket.emit('allPersons', null);
+  }
+
   createPerson(person: PersonModel, petId: number): void {
     console.log('emitting== ' + person.firstName + ' ' + 'Id ==' + petId);
     person.pet = {
