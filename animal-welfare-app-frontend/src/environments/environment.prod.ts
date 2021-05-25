@@ -10,6 +10,6 @@ export const environment = {
     measurementId: 'G-LZL7WZ4C5V'
 
   },
-  fundsBackendApi: '',
+  fundsBackendApi: 'https://funds-backend-animal-welfare.herokuapp.com/',
   adoptPetBackendApi: ''
 };
