@@ -13,18 +13,20 @@ import {NgxsModule} from '@ngxs/store';
 import {environment} from '../environments/environment';
 import {AdoptPetState} from './adopt-pet/state/adopt-pet.state';
 import {FundState} from './fund/state/fund.state';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 @Injectable()
 export class SocketAdopt extends Socket{
   constructor() {
-    super({url: 'http://localhost:3001', options: {} });
+    super({url: environment.adoptPetBackendApi, options: {} });
   }
 }
 
 @Injectable()
 export class SocketFunds extends Socket{
   constructor() {
-    super({url: 'http://localhost:3002', options: {} });
+    super({url: environment.fundsBackendApi, options: {} });
   }
 }
 @NgModule({
@@ -42,7 +44,9 @@ export class SocketFunds extends Socket{
     ReactiveFormsModule,
     NgxsModule.forRoot([AdoptPetState, FundState], {
       developmentMode: !environment.production
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [SocketFunds, SocketAdopt],
   bootstrap: [AppComponent]
