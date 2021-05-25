@@ -13,7 +13,9 @@ export const environment = {
     appId: '1:213669884171:web:66627e1fdd00eba7f5320e',
     measurementId: 'G-LZL7WZ4C5V'
 
-  }
+  },
+  fundsBackendApi: 'http://localhost:3002',
+  adoptPetBackendApi: 'http://localhost:3001'
 };
 
 /*

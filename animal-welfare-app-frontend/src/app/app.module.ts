@@ -19,14 +19,14 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 @Injectable()
 export class SocketAdopt extends Socket{
   constructor() {
-    super({url: 'http://localhost:3001', options: {} });
+    super({url: environment.adoptPetBackendApi, options: {} });
   }
 }
 
 @Injectable()
 export class SocketFunds extends Socket{
   constructor() {
-    super({url: 'http://localhost:3002', options: {} });
+    super({url: environment.fundsBackendApi, options: {} });
   }
 }
 @NgModule({
