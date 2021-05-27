@@ -6,6 +6,8 @@ import {FormControl} from '@angular/forms';
 import {UpdateMoneyDto} from './shared/update-money.dto';
 import {Select, Store} from '@ngxs/store';
 import {FundState} from './state/fund.state';
+import {GetAllFunds, ListenForAllFunds} from './state/fund.action';
+import {FundModel} from './shared/Model/FundModel';
 
 @Component({
   selector: 'app-fund',
@@ -13,17 +15,18 @@ import {FundState} from './state/fund.state';
   styleUrls: ['./fund.component.scss']
 })
 export class FundComponent implements OnInit {
-  allFunds$: Observable<FundDto[]> | undefined;
+  @Select(FundState.funds)
+  allFunds$: Observable<FundModel[]> | undefined;
   fund: FundDto | undefined;
   donationAmount = new FormControl();
-  @Select(FundState.fund());
+
 
   constructor(private fundService: FundService , private store: Store) { }
 
   ngOnInit(): void {
     // this.allFunds$ = this.fundService.getAllFunds();
-    this.store.dispatch(new getTotalFunds());
-    this.fundService.listenForAllFunds();
+    // this.store.dispatch(new GetAllFunds());
+    this.store.dispatch(new ListenForAllFunds());
     // this.fund$ = this.fundService.getFundsByCharityName();
     // this.fundService.listenForCharityName();
     console.log(this.allFunds$);
