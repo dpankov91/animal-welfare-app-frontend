@@ -3,7 +3,6 @@ import {Injectable} from '@angular/core';
 import {Pet} from '../shared/adopt-pet.model';
 import {CreatePet, ListenForPets} from './adopt-pet.action';
 import {AdoptPetService} from '../shared/adopt-pet.service';
-import {Observable} from 'rxjs';
 import {take, tap} from 'rxjs/operators';
 
 
@@ -15,7 +14,7 @@ export interface AdoptPetStateModel {
 @State<AdoptPetStateModel>({
   name: 'AdoptPet',
   defaults: {
-    pets: [],
+    pets: [], // This array has all the Pet model values from state.
   }
 })
 @Injectable()

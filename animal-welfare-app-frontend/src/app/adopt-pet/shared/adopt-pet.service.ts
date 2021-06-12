@@ -23,9 +23,9 @@ export class AdoptPetService {
   }
 
    getStatePets(): Observable<any>{
-    this.socket.emit('allPets', null);
+    this.socket.emit('allPets', null); // Send message to backend through specific socket
     return this.socket
-      .fromEvent<Pet[]>('allPets');
+      .fromEvent<Pet[]>('allPets'); // Returns an Observable from an event name through same socket.
   }
 
   createPet(pet: Pet): void {

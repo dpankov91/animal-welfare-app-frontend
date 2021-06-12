@@ -14,7 +14,7 @@ export const environment = {
     measurementId: 'G-LZL7WZ4C5V'
 
   },
-  fundsBackendApi: 'https://funds-backend-animal-welfare.herokuapp.com/',
+  fundsBackendApi: 'http://localhost:3002',
   adoptPetBackendApi: 'http://localhost:3001'
 };
 
